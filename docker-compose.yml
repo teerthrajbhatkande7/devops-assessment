@@ -1,18 +1,19 @@
-version: "3.8"
-
 services:
   backend:
-    build: ./backend
+    image: teerthraj77/backend:latest
     container_name: backend
-    env_file:
-      - backend/.env
     restart: always
+    environment:
+      - ALLOWED_HOSTS=*
+    expose:
+      - "8000"
 
   frontend:
-    build: ./frontend
+    image: teerthraj77/frontend:latest
     container_name: frontend
+    restart: always
     ports:
       - "80:80"
     depends_on:
       - backend
-    restart: always
+
