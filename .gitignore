@@ -32,3 +32,10 @@ Thumbs.db
 .terraform/
 terraform.tfstate
 terraform.tfstate.*
+
+
+
+# SSH Keys
+github_ec2_key
+github_ec2_key.pub
+*.pem
